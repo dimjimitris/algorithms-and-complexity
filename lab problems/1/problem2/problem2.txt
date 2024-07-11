@@ -1,0 +1,39 @@
+N = 6, K = 9
+
+1 1 3 7 3 3
+
+Lengths = [ 7 7 7 7 7 7 7 7 7 7 ]
+			 0 1 2 3 4 5 6 7 8 9
+
+
+ans = 7
+
+prefix = [ 0 1 2 5 12 15 18 ]
+			0 1 2 3  4  5  6
+
+for(int y = 6; y > -1; --y)
+{
+	1.
+	
+	for(int z = y + 1; z < 7; ++z)
+	{
+		sum = prefix[z] - prefix[y];
+		if (sum > 9) break;
+		
+		if (Lengths[sum] > z - y)
+			Lengths[sum] = z - y;
+	}
+	2.
+
+	for(int x = 0; x <= y; ++x)
+	{
+		sum = prefix[y] - prefix[x];
+		if (sum > 9) continue;
+		sum += Lengths[9 - sum]; //length, not sum
+		
+		ans = min(ans, sum);
+	}
+
+}
+
+return ans

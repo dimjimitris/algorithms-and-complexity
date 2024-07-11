@@ -1,0 +1,9 @@
+{
+    "files.associations": {
+        "*.pl": "prolog",
+        "vector": "cpp",
+        "queue": "cpp",
+        "utility": "cpp",
+        "iostream": "cpp"
+    }
+}
